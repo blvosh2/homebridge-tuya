@@ -107,6 +107,12 @@
                     "enum": [
                       "RGBTWOutlet"
                     ]
+                  },
+                  {
+                    "title": "Blind With Light",
+                    "enum": [
+                      "BlindsWithLight"
+                    ]
                   }
                 ]
               },
@@ -444,21 +450,21 @@
               "flipState": {
                 "type": "boolean",
                 "condition": {
-                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['GarageDoor','SimpleBlinds'].includes(model.devices[arrayIndices].type);"
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['GarageDoor','SimpleBlinds', 'BlindsWithLight'].includes(model.devices[arrayIndices].type);"
                 }
               },
               "timeToOpen": {
                 "type": "integer",
                 "placeholder": "45",
                 "condition": {
-                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['SimpleBlinds'].includes(model.devices[arrayIndices].type);"
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['SimpleBlinds', 'BlindsWithLight'].includes(model.devices[arrayIndices].type);"
                 }
               },
               "timeToTighten": {
                 "type": "integer",
                 "placeholder": "0",
                 "condition": {
-                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['SimpleBlinds'].includes(model.devices[arrayIndices].type);"
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['SimpleBlinds', 'BlindsWithLight'].includes(model.devices[arrayIndices].type);"
                 }
               },
               "dpLight": {
